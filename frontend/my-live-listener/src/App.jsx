@@ -1,17 +1,11 @@
 import React from "react";
-import ApiListener from "./ApiListener";
+import WeatherDashboard from "./WeatherDashboard";
 
 export default function App() {
   return (
-    <div style={{ fontFamily: "Arial" }}>
-      <h1 style={{ textAlign: "center", marginTop: "20px" }}>
-        Live Backend Listener Dashboard
-      </h1>
-      <p style={{ textAlign: "center", marginBottom: "20px" }}>
-        Displays JSON messages received from backend (SSE-only)
-      </p>
-
-      <ApiListener endpoint="http://127.0.0.1:8000/api/stream_campaign/" />
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+      <h1 className="text-center text-3xl font-bold py-6 text-gray-900 dark:text-white">Live Weather Dashboard</h1>
+      <WeatherDashboard />
     </div>
   );
 }
